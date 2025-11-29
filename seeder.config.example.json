@@ -1,0 +1,58 @@
+{
+  "global": {
+    "reset": false,
+    "incremental": false,
+    "randomize": false
+  },
+  "models": {
+    "User": {
+      "count": 50,
+      "fields": {
+        "email": {
+          "generator": "internet.email",
+          "type": "string"
+        },
+        "firstName": {
+          "generator": "person.firstName",
+          "type": "string"
+        },
+        "lastName": {
+          "generator": "person.lastName",
+          "type": "string"
+        },
+        "age": {
+          "type": "number",
+          "min": 18,
+          "max": 100
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "createdAt": {
+          "type": "date"
+        }
+      }
+    },
+    "Post": {
+      "count": 100,
+      "fields": {
+        "title": {
+          "generator": "lorem.sentence",
+          "type": "string"
+        },
+        "content": {
+          "generator": "lorem.paragraphs",
+          "type": "string"
+        }
+      },
+      "relations": {
+        "author": {
+          "min": 1,
+          "max": 1,
+          "model": "User"
+        }
+      }
+    }
+  }
+}
+
