@@ -25,8 +25,8 @@ async function testSeeder() {
       console.log(`  - ${model.name} (${model.fields.length} fields)`);
     });
 
-    console.log("\n🌱 Seeding User model (5 records)...");
-    const userResult = await seeder.seed("User", 5);
+    console.log("\n🌱 Seeding User model (10 records)...");
+    const userResult = await seeder.seed("User", 10);
     if (userResult.success) {
       console.log(`✅ Successfully seeded ${userResult.count} users`);
     } else {

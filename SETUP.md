@@ -31,7 +31,7 @@
    npm start seed --model User --count 50
 
    # Or using npx
-   npx dexter-db seed --model User --count 50
+   npx dexter seed --model User --count 50
    ```
 
 ## Development
@@ -56,7 +56,7 @@ npm run format
 ## Project Structure
 
 ```
-dexter-db/
+dexter/
 ├── src/                    # Source code
 │   ├── index.ts           # Main exports
 │   ├── seeder.ts          # Core Seeder class

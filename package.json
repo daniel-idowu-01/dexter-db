@@ -1,11 +1,11 @@
 {
-  "name": "dexter-db",
+  "name": "dexter",
   "version": "1.0.0",
   "description": "Dexter DB - Generate realistic test data for databases with relational dependencies",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "dexter-db": "./dist/cli.js"
+    "dexter": "./dist/cli.js"
   },
   "scripts": {
     "prebuild": "prisma generate || echo 'Warning: Prisma client generation skipped. Run npm run prisma:generate manually if needed.'",
@@ -31,7 +31,7 @@
   },
   "keywords": [
     "database",
-    "dexter-db",
+    "dexter",
     "seeder",
     "faker",
     "test-data",
@@ -42,12 +42,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/daniel-idowu-01/dexter-db.git"
+    "url": "https://github.com/daniel-idowu-01/dexter.git"
   },
   "bugs": {
-    "url": "https://github.com/daniel-idowu-01/dexter-db/issues"
+    "url": "https://github.com/daniel-idowu-01/dexter/issues"
   },
-  "homepage": "https://github.com/daniel-idowu-01/dexter-db#readme",
+  "homepage": "https://github.com/daniel-idowu-01/dexter#readme",
   "dependencies": {
     "@faker-js/faker": "^8.3.1",
     "@prisma/client": "^5.22.0",
