@@ -2,8 +2,8 @@
   "name": "dexter",
   "version": "1.0.0",
   "description": "Dexter DB - Generate realistic test data for databases with relational dependencies",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "bin": {
     "dexter": "./dist/cli.js"
   },
