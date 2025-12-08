@@ -60,7 +60,7 @@ export class StringGenerator extends BaseGenerator {
     }
 
     if (config?.pattern) {
-      return faker.helpers.regexpStyleStringParse(config.pattern);
+      return faker.helpers.fromRegExp(config.pattern);
     }
 
     return faker.lorem.words(3);
