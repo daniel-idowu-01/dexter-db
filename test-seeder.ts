@@ -23,8 +23,17 @@ async function test() {
     console.log('\n Seeding User (20 records)...');
     await seeder.seed('User', 20);
 
-    console.log('\n Seeding Post (50 records)...');
-    await seeder.seed('Post', 50);
+    // console.log('\n Seeding Post (50 records)...');
+    // await seeder.seed('Post', 50);
+
+    // console.log('\n Seeding Activity (10 records)...');
+    // await seeder.seed('Activity', 10);
+
+    // console.log('\n Seeding Currency (10 records)...');
+    // await seeder.seed('Currency', 10);
+
+    console.log('\n Seeding Otp (10 records)...');
+    await seeder.seed('Otp', 10);
 
     console.log('\n All done!');
   } catch (error: any) {

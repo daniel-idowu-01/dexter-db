@@ -41,7 +41,4 @@ const PostSchema = new Schema<IPost>(
   }
 );
 
-PostSchema.index({ authorId: 1 });
-PostSchema.index({ published: 1, createdAt: -1 });
-
 export default mongoose.model<IPost>('Post', PostSchema);
