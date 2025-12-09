@@ -3,9 +3,9 @@ services:
     image: mongo:7
     container_name: dexter-mongodb
     environment:
-      MONGO_INITDB_ROOT_USERNAME: dexter
-      MONGO_INITDB_ROOT_PASSWORD: dexter123
-      MONGO_INITDB_DATABASE: dexter_test
+      MONGO_INITDB_ROOT_USERNAME: ${DB_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASS}
+      MONGO_INITDB_DATABASE: ${DB_NAME}
     ports:
       - "27017:27017"
     volumes:
