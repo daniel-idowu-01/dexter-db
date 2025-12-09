@@ -1,0 +1,75 @@
+{
+  "global": {
+    "reset": false,
+    "incremental": false,
+    "randomize": false
+  },
+  "models": {
+    "User": {
+      "count": 10,
+      "fields": {
+        "email": {
+          "generator": "internet.email"
+        },
+        "firstName": {
+          "generator": "person.firstName"
+        },
+        "lastName": {
+          "generator": "person.lastName"
+        }
+      }
+    },
+    "Otp": {
+      "count": 20,
+      "fields": {
+        "otp": {
+          "type": "string",
+          "pattern": "[0-9]{6}"
+        },
+        "rawOtp": {
+          "type": "string",
+          "pattern": "[0-9]{6}"
+        },
+        "expiresAt": {
+          "type": "date",
+          "generator": "date.future"
+        },
+        "email": {
+          "generator": "internet.email"
+        },
+        "username": {
+          "generator": "internet.userName"
+        },
+        "smsOtp": {
+          "type": "string",
+          "pattern": "[0-9]{6}"
+        },
+        "rawSmsOtp": {
+          "type": "string",
+          "pattern": "[0-9]{6}"
+        },
+        "phoneNumber": {
+          "generator": "phone.number",
+          "type": "string"
+        },
+        "otpCount": {
+          "type": "number",
+          "min": 0,
+          "max": 5
+        },
+        "termiiPinId": {
+          "generator": "string.uuid"
+        },
+        "channel": {
+          "type": "enum",
+          "values": ["email", "sms", "whatsapp"]
+        }
+      },
+      "relations": {
+        "userId": {
+          "model": "User"
+        }
+      }
+    }
+  }
+}
