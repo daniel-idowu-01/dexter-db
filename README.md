@@ -1,6 +1,6 @@
 # Dexter DB Seeder & Faker
 
-A powerful TypeScript Node.js library and CLI tool for automatically generating realistic test data for databases. Supports PostgreSQL with Prisma ORM, handles relational dependencies, respects types, and provides configurable seeding options.
+A powerful TypeScript Node.js library and CLI tool for automatically generating realistic test data for databases. Supports MongoDB, handles relational dependencies, respects types, and provides configurable seeding options.
 
 ## Features
 
