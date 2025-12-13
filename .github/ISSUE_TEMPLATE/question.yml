@@ -1,0 +1,13 @@
+name: Question / Usage Help
+description: Ask about usage or behavior
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Include code if relevant.
+      render: typescript
+    validations:
+      required: true
