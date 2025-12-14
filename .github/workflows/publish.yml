@@ -27,10 +27,6 @@ jobs:
 
       - run: npm version patch
 
-      - name: Push version bump
-        run: |
-          git push origin HEAD:main --follow-tags
-
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
