@@ -91,19 +91,25 @@ export class StringGenerator extends BaseGenerator {
       Logger.warning(`Rejected unsafe generator path: ${generator}`);
       return faker.lorem.words(3);
     }
+
+    // Walk the dotted path (e.g. "internet.email") down to the terminal member,
+    // tracking the immediate parent so the function keeps its `this` context.
+    let parent: unknown = faker;
     let value: unknown = faker;
 
     for (const part of parts) {
-      const record = value as Record<string, unknown>;
-      const next = record[part];
-      if (typeof next === "function") {
-        value = (next as () => unknown)();
-      } else {
+      if (value === null || typeof value !== "object") {
         return faker.lorem.words(3);
       }
+      parent = value;
+      value = (value as Record<string, unknown>)[part];
     }
 
-    return String(value);
+    if (typeof value !== "function") {
+      return faker.lorem.words(3);
+    }
+
+    return String((value as (...args: unknown[]) => unknown).call(parent));
   }
 }
 
